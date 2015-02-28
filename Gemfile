@@ -32,6 +32,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem "rails_12factor"
+  gem "thin", "~> 1.6.1"
+  gem "pg"
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -41,5 +47,41 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry'
+
 end
 
+gem 'pusher'
+gem 'pusher-client'
+
+# ActiveModel::Serializer implementation and Rails hooks
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
+
+# HAML for RoR
+gem 'haml-rails', '~> 0.8'
+
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+gem 'simple_form'
+
+# FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord
+gem 'friendly_id', '~> 5.1.0'
+
+gem 'rails-timeago', '~> 2.0'
+
+gem 'devise'
+
+gem 'sinatra', require: false
+gem 'sidekiq'
+
+gem 'foundation-rails'
+
+gem "omniauth"
+gem "omniauth-github", '1.1.1'
+gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'delayed_job_active_record'
+gem 'delayed_job_web'
+gem "github_api"

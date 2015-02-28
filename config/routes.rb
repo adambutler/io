@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  require 'sidekiq/web'
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+  devise_for :users
+
+  mount Sidekiq::Web, at: '/sidekiq'
+
+  root to: "static#home"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

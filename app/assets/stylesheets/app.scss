@@ -1,0 +1,21 @@
+.card {
+  transition: all 0.5s ease-in-out;
+  text-align: left;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  padding: 20px 10px;
+  margin-bottom: 20px;
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: #444;
+  }
+  .name {
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    margin-bottom: 10px;
+  }
+}
+
+h3 {
+  margin-bottom: 0;
+}

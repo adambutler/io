@@ -1,0 +1,20 @@
+- unless current_user
+  = link_to "Get an account now!", new_user_registration_path
+- else
+  - if current_user.github
+    = link_to "Github linked ^_^", "/auth/github", class: "button success"
+  - else
+    = link_to "Link Github", "/auth/github", class: "button"
+
+  #feed.row
+    - current_user.github.activities.each do |activity|
+      .columns.small-12.medium-6.medium-centered.card.text-center
+        %h5
+          %i.fa.fa-github
+          Github
+        %h3.name activity.data.actor.login
+        %h5
+          did a #{activity.data.type} on
+          %br
+          %br
+          %code= activity.data.repo.name

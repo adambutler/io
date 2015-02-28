@@ -12,4 +12,33 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+html {
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 100;
+  font-size: 4em;
+}
+
+body {
+  background: #e55700; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #e55700 0%, #ce3b80 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e55700), color-stop(100%,#ce3b80)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #e55700 0%,#ce3b80 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #e55700 0%,#ce3b80 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #e55700 0%,#ce3b80 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #e55700 0%,#ce3b80 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55700', endColorstr='#ce3b80',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed;
+}
