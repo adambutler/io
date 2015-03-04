@@ -13,6 +13,7 @@
           %h5.card__provider
             %i.fa.fa-github
             Github
+          = image_tag activity.data.actor.avatar_url, class: "avatar"
           %h3.name= activity.data.actor.login
           %h5
             did a #{activity.data.type} on
