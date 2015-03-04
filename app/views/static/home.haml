@@ -8,13 +8,14 @@
 
   #feed.row
     - current_user.github.activities.each do |activity|
-      .columns.small-12.medium-6.medium-centered.card.text-center
-        %h5
-          %i.fa.fa-github
-          Github
-        %h3.name activity.data.actor.login
-        %h5
-          did a #{activity.data.type} on
-          %br
-          %br
-          %code= activity.data.repo.name
+      .columns.small-12.medium-6.medium-centered
+        .card.text-center
+          %h5.card__provider
+            %i.fa.fa-github
+            Github
+          %h3.name= activity.data.actor.login
+          %h5
+            did a #{activity.data.type} on
+            %br
+            %br
+            %code= activity.data.repo.name
